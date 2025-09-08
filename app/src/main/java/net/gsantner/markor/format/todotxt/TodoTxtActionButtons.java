@@ -140,6 +140,11 @@ public class TodoTxtActionButtons extends ActionButtonBase {
     public boolean onActionLongClick(final @StringRes int action) {
 
         switch (action) {
+            case R.string.abid_todotxt_toggle_done: {
+                final boolean hideDone = _appSettings.getTodotxtHideDone();
+                _appSettings.setTodotxtHideDone(!hideDone);
+                return true;
+            }
             case R.string.abid_todotxt_add_context: {
                 MarkorDialogFactory.showSttKeySearchDialog(getActivity(), _hlEditor, R.string.browse_by_context, true, true, TodoTxtFilter.TYPE.CONTEXT);
                 return true;

@@ -1,6 +1,7 @@
 ### Recent changes
 - See [Discussions](https://github.com/gsantner/markor/discussions), [Issues](https://github.com/gsantner/markor/issues) and [Project news](https://github.com/gsantner/markor/blob/master/NEWS.md) to see what is going on.
 - New Updates also visible here: <https://github.com/gsantner/markor/releases>
+- todo.txt: Long press Done to toggle hiding done items
 
 
 ### v2.14 series

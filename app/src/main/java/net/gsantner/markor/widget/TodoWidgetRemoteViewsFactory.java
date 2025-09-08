@@ -39,7 +39,8 @@ public class TodoWidgetRemoteViewsFactory implements RemoteViewsService.RemoteVi
         if (content == null) {
             return;
         }
-        List<TodoTxtTask> tasks = TodoTxtTask.getAllTasks(content);
+        final boolean hideDone = _appSettings.getTodotxtHideDone();
+        List<TodoTxtTask> tasks = TodoTxtTask.getVisibleTasks(content, hideDone);
         _tasks.addAll(tasks);
     }
 

@@ -64,7 +64,7 @@ public class TodoTxtTask {
         return DATEF_YYYY_MM_DD.format(new Date());
     }
 
-    public static List<TodoTxtTask> getTasks(final CharSequence text, final int[] sel) {
+    public static List<TodoTxtTask> getTasks(final CharSequence text, final int[] sel, bool hideDone) {
         final List<TodoTxtTask> tasks = new ArrayList<>();
         if (GsTextUtils.isValidSelection(text, sel)) {
 
@@ -72,18 +72,25 @@ public class TodoTxtTask {
             final String[] lines = text.subSequence(lsel[0], lsel[1]).toString().split("\n");
 
             for (final String line : lines) {
-                tasks.add(new TodoTxtTask(line));
+                TodoTxtTask task = new TodoTxtTask(line);
+                if (!hideDone || task.isDone()) {
+                    tasks.add(task);
+                }
             }
         }
         return tasks;
     }
 
     public static List<TodoTxtTask> getSelectedTasks(final TextView view) {
-        return getTasks(view.getText(), TextViewUtils.getSelection(view));
+        return getTasks(view.getText(), TextViewUtils.getSelection(view), false);
+    }
+
+    public static List<TodoTxtTask> getVisibleTasks(final CharSequence text, final boolean hideDone) {
+        return getTasks(text, new int[]{0, text.length()}, hideDone);
     }
 
     public static List<TodoTxtTask> getAllTasks(final CharSequence text) {
-        return getTasks(text, new int[]{0, text.length()});
+        return getTasks(text, new int[]{0, text.length()}, false);
     }
 
     public static List<String> getProjects(final List<TodoTxtTask> tasks) {

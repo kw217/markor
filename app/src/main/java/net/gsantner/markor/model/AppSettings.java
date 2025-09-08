@@ -1112,4 +1112,12 @@ public class AppSettings extends GsSharedPreferencesPropertyBackend {
     public boolean getFormatShareAsLink() {
         return getBool(R.string.pref_key__format_share_as_link, true);
     }
+
+    public void setTodotxtHideDone(final boolean hideDone) {
+        setBool(R.string.pref_key__todotxt__hide_done, hideDone);
+    }
+
+    public boolean getTodotxtHideDone() {
+        return getBool(R.string.pref_key__todotxt__hide_done, false);
+    }
 }
