@@ -305,7 +305,7 @@
 - Long click on main view plus button -> open favourites/recents
 - Use lightweight Markdown heading highlighting on non-highend devices
 - Show SD Card dialog when opening file that is under SAF
-- Share: Rename PDF -> Print/PDF 
+- Share: Rename PDF -> Print/PDF
 - Text action to sort todo by date
 - Keep view mode scroll position
 - Remove LinkBox from main screen to improve performance
@@ -342,138 +342,138 @@
 
 
 ### v1.8 ([Details](https://github.com/gsantner/markor/blob/master/NEWS.md#markor-v18---all-new-file-browser-favourites-and-faster-markdown-preview))
-- Show app intro at first start  
-- All new file navigation  
-- Add favourite files  
-- Add quick navigiation options (to notebook, sdcard, AppData and more)  
-- Add option to set Navigation-Bar color  
-- Combine edit & view mode to one fragment, show view as overlay  
-- Add horizontal scrolling for code blocks in view mode  
-- More efficient undo/redo  
-- Option to enable/disable swipe to change mode  
-- WikiLinks: Disable default escaped characters, so subfolder path is not converted to hyphen  
-- Added fonts: Source Pro, DejaVu Sans Mono, Ubuntu, Lato  
-- Scan storage Fonts folder for custom fonts  
-- Add word count to document info dialog  
+- Show app intro at first start
+- All new file navigation
+- Add favourite files
+- Add quick navigiation options (to notebook, sdcard, AppData and more)
+- Add option to set Navigation-Bar color
+- Combine edit & view mode to one fragment, show view as overlay
+- Add horizontal scrolling for code blocks in view mode
+- More efficient undo/redo
+- Option to enable/disable swipe to change mode
+- WikiLinks: Disable default escaped characters, so subfolder path is not converted to hyphen
+- Added fonts: Source Pro, DejaVu Sans Mono, Ubuntu, Lato
+- Scan storage Fonts folder for custom fonts
+- Add word count to document info dialog
 
 
 ### v1.7 ([Details](https://github.com/gsantner/markor/blob/master/NEWS.md#markor-v17---custom-fonts-linkbox-with-markdown))
-- Improved app color theme for better readability  
-- Load custom fonts from file  
-  - Markor bundles 5 additional open fonts  
-  - Copy custom fonts to folder: 'Notebook/.app/fonts/'  
-- Links shared from e.g. browsers are automatically converted to Markdown syntax if possible  
-- LinkBox is now listed on the main view bottom bar  
-- LinkBox defaults on new installations to LinkBox.md as filename  
-- Default to last used date/time format at dialog  
-- Apply todo.txt format only for .txt files  
-- L/R Swipe in edit/representation mode to change mode  
-- Open link textaction: Don't include trailing ')' in parsed URL, which is common for markdown  
-- Added App Shortcuts, requires Android 7.1+  
-- Markdown: Enable WikiLink style to reference [[file]] relative  
-- Strip #ref from URL in representation to determine if another file should be opened on click  
-- Option to set app start tab (Notebook / ToDo / QuickNote / LinkBox / More)  
+- Improved app color theme for better readability
+- Load custom fonts from file
+  - Markor bundles 5 additional open fonts
+  - Copy custom fonts to folder: 'Notebook/.app/fonts/'
+- Links shared from e.g. browsers are automatically converted to Markdown syntax if possible
+- LinkBox is now listed on the main view bottom bar
+- LinkBox defaults on new installations to LinkBox.md as filename
+- Default to last used date/time format at dialog
+- Apply todo.txt format only for .txt files
+- L/R Swipe in edit/representation mode to change mode
+- Open link textaction: Don't include trailing ')' in parsed URL, which is common for markdown
+- Added App Shortcuts, requires Android 7.1+
+- Markdown: Enable WikiLink style to reference [[file]] relative
+- Strip #ref from URL in representation to determine if another file should be opened on click
+- Option to set app start tab (Notebook / ToDo / QuickNote / LinkBox / More)
 
 
 ### v1.6 ([Details](https://github.com/gsantner/markor/blob/master/NEWS.md#markor-v16---datetime-dialog---jekyll-and-katex-improvements))
-**New features:**  
-- TextAction: Insert date/time  
-- Add website title when sharing into Markor, if browser supports it  
+**New features:**
+- TextAction: Insert date/time
+- Add website title when sharing into Markor, if browser supports it
   - Website title + URL formatted in Markdown format if possible
 
-**Improved:**  
-- Automatically create ToDo/linkbox/QuickNote and parent folders when using respective launcher  
-- KaTex/Math: Improve inline math  
-- Close virtual keyboard after creating new file  
-- Language selection: Load system's most important language as system hint  
-- Markdown + Jekyll: Replace {{ site.baseurl }} with .. in representation  
-- More padding at settings on older devices  
+**Improved:**
+- Automatically create ToDo/linkbox/QuickNote and parent folders when using respective launcher
+- KaTex/Math: Improve inline math
+- Close virtual keyboard after creating new file
+- Language selection: Load system's most important language as system hint
+- Markdown + Jekyll: Replace {{ site.baseurl }} with .. in representation
+- More padding at settings on older devices
 - Use the new file dialog for sharing into new documents
-- Filesystem dialog now shows images / textfiles only at respective file selection  
+- Filesystem dialog now shows images / textfiles only at respective file selection
 
-**Fixed:**  
-- New file dialog: Jekyll option on older devices  
-- Title not updated when swiping  
+**Fixed:**
+- New file dialog: Jekyll option on older devices
+- Title not updated when swiping
 
 ### v1.5 ([Details](https://github.com/gsantner/markor/blob/master/NEWS.md#markor-v15---multiple-windows-markdown-tasks-theming))
-**New features:**  
-- App-wide  
+**New features:**
+- App-wide
   - Settings option: Keep screen on
-- Editor  
-  - Open multiple Windows  
-- Document browser  
-  - Completly new 'New file' dialog  
-- Text Actions  
-  - Sort todo.txt files  
-  - Tasks support in Markdown  
+- Editor
+  - Open multiple Windows
+- Document browser
+  - Completly new 'New file' dialog
+- Text Actions
+  - Sort todo.txt files
+  - Tasks support in Markdown
 
-**Improved:**  
-- Document browser  
-  - Replace 'Reload button' with pull down to refresh  
-  - Added 'Last modified' to File information dialog  
-- Editor  
-  - Added greenscale basic editor colors  
-- Representation  
-  - Set inital background color before loading document  
+**Improved:**
+- Document browser
+  - Replace 'Reload button' with pull down to refresh
+  - Added 'Last modified' to File information dialog
+- Editor
+  - Added greenscale basic editor colors
+- Representation
+  - Set inital background color before loading document
   - Math/KaTex: Show inline when single dollar is used
 
 ### v1.4
-**New features:**  
-- App-wide  
-  - Add popular documents to 'share into'  
-- Editor  
-  - Settings options for editor background and foreground color  
-  - todo.txt: Highlight multiple levels of context/projects (@@/++)  
-- Text Actions  
-  - Add zero-width space character to 'special characters'  
-  - Add color picker  
+**New features:**
+- App-wide
+  - Add popular documents to 'share into'
+- Editor
+  - Settings options for editor background and foreground color
+  - todo.txt: Highlight multiple levels of context/projects (@@/++)
+- Text Actions
+  - Add zero-width space character to 'special characters'
+  - Add color picker
 
-**Improved:**  
-- TextActions  
-  - Markdown: Multiline textaction for header/quote/list  
-- Editor  
-  - More space for document title  
-  - Harden automatic file naming and moving  
-- Representation  
-  - Enable block rendering for KaTex (math)  
-- App-wide  
-  - Natural scrolling in dialogs  
+**Improved:**
+- TextActions
+  - Markdown: Multiline textaction for header/quote/list
+- Editor
+  - More space for document title
+  - Harden automatic file naming and moving
+- Representation
+  - Enable block rendering for KaTex (math)
+- App-wide
+  - Natural scrolling in dialogs
 
-**Fixed:**  
-- Filesystem  
-  - Discard selection when leaving filesystem view  
+**Fixed:**
+- Filesystem
+  - Discard selection when leaving filesystem view
 
 ### v1.3
-**New features:**  
-- App-wide  
-  - Add 'Auto' theme, switch light/dark theme by current hour  
+**New features:**
+- App-wide
+  - Add 'Auto' theme, switch light/dark theme by current hour
   - Support for Chrome Custom Tabs
 - Editor
-  - Start document at the recent cursor position (jump to bottom on new documents and at special files)  
-  - Enable link highlighting in plaintext format (especially easier to distinguish title and links in linkbox)  
-- Text Actions  
-  - Markdown: Long press image adds img-src with max-height  
-  - Long press 'Special key' jumps to top/bottom  
-  - Long press 'Open external' opens content search  
- 
-**Improved:**  
-- TextActions  
-  - Don't list empty lines in simple search  
-  - Edit picture supports now relative filepaths too  
-  - Show import dialog for selected pictures too (like in file selection)  
-- Representation  
-  - Renamed from Preview
-  - Performance improvement for TOC & Math - only use when text contains headers/math  
-  - Markdown: Underline h2 too (like h1, more common for two levels)  
-  - ToDo: Add alternative naming for contexts/projects  
-- App-wide  
-  - 
+  - Start document at the recent cursor position (jump to bottom on new documents and at special files)
+  - Enable link highlighting in plaintext format (especially easier to distinguish title and links in linkbox)
+- Text Actions
+  - Markdown: Long press image adds img-src with max-height
+  - Long press 'Special key' jumps to top/bottom
+  - Long press 'Open external' opens content search
 
-**Fixed:**  
+**Improved:**
+- TextActions
+  - Don't list empty lines in simple search
+  - Edit picture supports now relative filepaths too
+  - Show import dialog for selected pictures too (like in file selection)
+- Representation
+  - Renamed from Preview
+  - Performance improvement for TOC & Math - only use when text contains headers/math
+  - Markdown: Underline h2 too (like h1, more common for two levels)
+  - ToDo: Add alternative naming for contexts/projects
+- App-wide
+  -
+
+**Fixed:**
 - Editor
   - Disable 'History disable' performance option for data integrity
 - App-wide
-  - Special files: When app launcher was used, create file if not exists   
+  - Special files: When app launcher was used, create file if not exists
 
 ### v1.2 ([Details](https://github.com/gsantner/markor/blob/master/NEWS.md#markor-v12---markdown-with-katexmath---search-in-current-document))
 **New features:**
@@ -497,18 +497,18 @@
   - File saving
 
 ### v1.1 ([Details](https://github.com/gsantner/markor/blob/master/NEWS.md#markor-v11---markdown-picture-import-from-gallery-and-camera))
-**New features:**  
+**New features:**
 - Text Module Actions
   - Markdown Picture Dialog
   - Load picture from gallery
   - Take picture with camera
   - Edit picture with graphics app
 
-**Improved:**  
+**Improved:**
 - Formats
   - Load Markdown Format for .md.txt files
 
-**Fixed:**  
+**Fixed:**
 - Editor
   - Change default lineheight back to 100%
   - Not connects multiple lines anymore
@@ -516,12 +516,12 @@
   - More checks for storage access and the yellow info box
 
 ### v1.0.1
-**New features:**  
+**New features:**
 - Add popular files (most used files by access count)
 - Add popular & recent files as virtual folder under /storage/
   - Selectable e.g. for widgets
 
-**Improved:**  
+**Improved:**
 - Text-Module-Actions
   - More safety checks at execution
 - Highlighting
@@ -529,11 +529,11 @@
   - MD: Better unordered list readability
 
 ### v1.0.0
-**New features:**  
+**New features:**
 - ShareInto
   - Added export: calendar appointment
 
-**Improved:**  
+**Improved:**
 - Widget
   - Added shortcuts to ToDo, QuickNote and LinkBox
 - SD Card handling and permission errors
@@ -543,7 +543,7 @@
 - ShareInto
   - Better separator placement
 
-**Fixed:**  
+**Fixed:**
 - Widget
   - Open selected file
 - Editor
@@ -554,7 +554,7 @@
   - Allow to view Details for folder too
 
 ### v0.3.10
-**New features:**  
+**New features:**
 - ShareInto
   - Show "open in browser" option if text contains link
   - Prepend separator to all existing documents
@@ -564,24 +564,24 @@
   - Contains some (uncommented) modification lines for important elements
   - like font size, font type, script to load when page loaded etc.
 
-**Improved:**  
+**Improved:**
 - Inherit font size from global font preference
 
-**Fixed:**  
+**Fixed:**
 - Recents working without having opened anything yet
 
 ### v0.3.9
-**Improved:**  
+**Improved:**
 - Translation updated
 - Updated project description
 - Slightly modified adaptive icon
 
-**Fixed:**  
+**Fixed:**
 - Editor-Rotation: Creates new file again when editing before
 - Create folder: Screen rotation
 
 ### v0.3.8
-**New features:**  
+**New features:**
 - Recently viewed documents
   - Start editing of recent documents, button in the toolbar of main view
   - Allow sharing into recend documents
@@ -590,8 +590,8 @@
 - Document/File Info: Dialog showing information about selected file
   - Openable at main views toolbar when one item is selected
 
-**Improved:**  
-- Overall better performance 
+**Improved:**
+- Overall better performance
   - Faster document loading
   - Decreased memory usage
 - Reduce edit history size (undo/redo) to 5 for lower memory usage
@@ -601,7 +601,7 @@
   - Blockquote theme based styling
   - Blockquote RTL compatibility
 
-**Fixed:**  
+**Fixed:**
 - Crash when Markor put to background and huge file is loaded
   - Document contents are not stored into resume cache anymore if they are too big
   - Make no major differences for huge files, just undo/redo history is cleared when switchting away
@@ -764,11 +764,11 @@
 - New initial features
 
 ### v
-**New features:**  
+**New features:**
 -
 
-**Improved:**  
+**Improved:**
 -
 
-**Fixed:**  
+**Fixed:**
 -

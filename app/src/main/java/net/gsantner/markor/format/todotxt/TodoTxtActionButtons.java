@@ -143,6 +143,14 @@ public class TodoTxtActionButtons extends ActionButtonBase {
             case R.string.abid_todotxt_toggle_done: {
                 final boolean hideDone = _appSettings.getTodotxtHideDone();
                 _appSettings.setTodotxtHideDone(!hideDone);
+                // TODO be nicer
+                final List<TodoTxtTask> tasks = TodoTxtTask.getAllTasks(_hlEditor.getText());
+                if (_appSettings.getTodotxtHideDone()) {
+                    tasks.add(tasks.get(1));
+                } else {
+                    tasks.add(tasks.get(0));
+                }
+                setEditorTextAsync(TodoTxtTask.tasksToString(tasks));
                 return true;
             }
             case R.string.abid_todotxt_add_context: {
@@ -167,7 +175,7 @@ public class TodoTxtActionButtons extends ActionButtonBase {
                 final int[] sel = TextViewUtils.getSelection(_hlEditor);
                 final int lineStart = TextViewUtils.getLineStart(text, sel[0]);
                 final int lineEnd = TextViewUtils.getLineEnd(text, sel[1]);
-                final List<TodoTxtTask> tasks = TodoTxtTask.getTasks(text, new int[]{sel[0], sel[1]});
+                final List<TodoTxtTask> tasks = TodoTxtTask.getTasks(text, new int[]{sel[0], sel[1]}, true);
                 char prevPriority = '\0', nextPriority = '\0';
                 boolean areAllSamePriority = true;
                 if (lineStart != 0) {

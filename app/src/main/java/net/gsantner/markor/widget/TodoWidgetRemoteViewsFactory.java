@@ -2,6 +2,7 @@ package net.gsantner.markor.widget;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
 
@@ -41,6 +42,9 @@ public class TodoWidgetRemoteViewsFactory implements RemoteViewsService.RemoteVi
         }
         final boolean hideDone = _appSettings.getTodotxtHideDone();
         List<TodoTxtTask> tasks = TodoTxtTask.getVisibleTasks(content, hideDone);
+        TodoTxtTask bonusTask = new TodoTxtTask("bonus " + tasks.size());
+        Log.i("keith", "fun fun fun" + tasks.size());
+        tasks.add(bonusTask);
         _tasks.addAll(tasks);
     }
 

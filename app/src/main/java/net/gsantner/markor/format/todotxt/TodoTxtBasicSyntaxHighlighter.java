@@ -1,6 +1,7 @@
 package net.gsantner.markor.format.todotxt;
 
 import android.graphics.Typeface;
+import android.util.Log;
 
 import net.gsantner.markor.frontend.textview.SyntaxHighlighterBase;
 import net.gsantner.markor.model.AppSettings;
@@ -28,6 +29,7 @@ public class TodoTxtBasicSyntaxHighlighter extends SyntaxHighlighterBase {
 
     @Override
     public void generateSpans() {
+        Log.i("keith", "generate todotxt spans", new Throwable());
         createSmallBlueLinkSpans();
         createColorSpanForMatches(TodoTxtTask.PATTERN_CONTEXTS, COLOR_CONTEXT);
         createColorSpanForMatches(TodoTxtTask.PATTERN_PROJECTS, COLOR_CATEGORY);
@@ -47,6 +49,12 @@ public class TodoTxtBasicSyntaxHighlighter extends SyntaxHighlighterBase {
 
         // Strike out done tasks
         // Note - as we now sort by start, projects, contexts, tags and due date will be highlighted for done tasks
-        createSpanForMatches(TodoTxtTask.PATTERN_DONE, new HighlightSpan().setForeColor(_isDarkMode ? COLOR_DONE_DARK : COLOR_DONE_LIGHT).setStrike(true));
+        if (_appSettings.getTodotxtHideDone()) {
+//            createReplacementSpanForMatches(TodoTxtTask.PATTERN_DONE, 0);
+            createRelativeSizeSpanForMatches(TodoTxtTask.PATTERN_DONE, 0);
+//            createLineHeightSpanForMatches(TodoTxtTask.PATTERN_DONE, 0);
+        } else {
+            createSpanForMatches(TodoTxtTask.PATTERN_DONE, new HighlightSpan().setForeColor(_isDarkMode ? COLOR_DONE_DARK : COLOR_DONE_LIGHT).setStrike(true));
+        }
     }
 }

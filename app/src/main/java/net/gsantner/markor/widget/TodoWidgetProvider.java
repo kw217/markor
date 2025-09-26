@@ -7,6 +7,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
+import android.util.Log;
 import android.widget.RemoteViews;
 
 import net.gsantner.markor.ApplicationObject;
@@ -19,6 +20,7 @@ public class TodoWidgetProvider extends AppWidgetProvider {
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
+        Log.i("keith", "fun fun fun again");
 
         int requestCode = 1;
         final AppSettings appSettings = AppSettings.get(context);

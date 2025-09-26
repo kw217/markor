@@ -1118,6 +1118,6 @@ public class AppSettings extends GsSharedPreferencesPropertyBackend {
     }
 
     public boolean getTodotxtHideDone() {
-        return getBool(R.string.pref_key__todotxt__hide_done, false);
+        return getBool(R.string.pref_key__todotxt__hide_done, true);
     }
 }

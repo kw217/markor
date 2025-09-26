@@ -25,6 +25,7 @@ import android.text.Html;
 import android.text.InputType;
 import android.text.Spannable;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Pair;
 import android.view.WindowManager;
 import android.webkit.WebView;
@@ -433,6 +434,8 @@ public class MarkorDialogFactory {
             final EditText text,
             final GsCallback.b1<TodoTxtTask> filter
     ) {
+        Log.i("keith", "makeSttLineSelectionDialog I think");
+
         final AppSettings as = AppSettings.get(activity);
         final DialogOptions dopt = baseConf(activity);
         final List<TodoTxtTask> allTasks = TodoTxtTask.getAllTasks(text.getText());
@@ -738,6 +741,7 @@ public class MarkorDialogFactory {
 
     // Get a callback which applies highligting spans to a todo.txt line
     private static GsCallback.a1<Spannable> getSttHighlighter(final AppSettings as) {
+        Log.i("keith", "get highlighter OK");
         final SyntaxHighlighterBase h = new TodoTxtBasicSyntaxHighlighter(as).configure();
         return s -> h.setSpannable(s).recompute().applyStatic().applyDynamic();
     }

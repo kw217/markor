@@ -64,7 +64,7 @@ public class TodoTxtTask {
         return DATEF_YYYY_MM_DD.format(new Date());
     }
 
-    public static List<TodoTxtTask> getTasks(final CharSequence text, final int[] sel, bool hideDone) {
+    public static List<TodoTxtTask> getTasks(final CharSequence text, final int[] sel, boolean hideDone) {
         final List<TodoTxtTask> tasks = new ArrayList<>();
         if (GsTextUtils.isValidSelection(text, sel)) {
 

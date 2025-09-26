@@ -17,6 +17,7 @@ import android.text.Spanned;
 import android.text.TextPaint;
 import android.text.TextUtils;
 import android.text.style.CharacterStyle;
+import android.text.style.LineHeightSpan;
 import android.text.style.RelativeSizeSpan;
 import android.text.style.ReplacementSpan;
 import android.text.style.SubscriptSpan;
@@ -464,6 +465,7 @@ public abstract class SyntaxHighlighterBase {
 
     protected final void addSpanGroup(final Object span, final int start, final int end, final int type) {
         if (end >= start && span != null) {
+            Log.i("keith", "addSpanGroup " + start + " " + end);
             _groupBuffer.add(new SpanGroup(span, start, end, type));
         }
     }
@@ -516,11 +518,36 @@ public abstract class SyntaxHighlighterBase {
         createSpanForMatches(pattern, matcher -> new ReplacementSpan() {
             @Override
             public int getSize(@NonNull Paint paint, CharSequence text, int start, int end, Paint.FontMetricsInt fm) {
+                if (fm != null) {
+                    fm.top = fm.bottom = 0;
+                    fm.ascent = fm.descent = 0;
+                    fm.leading = 0;
+                }
                 return charWidth;
             }
 
             @Override
             public void draw(@NonNull Canvas canvas, CharSequence text, int start, int end, float x, int top, int y, int bottom, @NonNull Paint paint) {
+            }
+
+
+        }, groupsToMatch);
+    }
+    protected final void createLineHeightSpanForMatches(final Pattern pattern, final int lineHeight, int... groupsToMatch) {
+        createSpanForMatches(pattern, matcher -> new LineHeightSpan.WithDensity() {
+            @Override
+            public void chooseHeight(CharSequence charSequence, int i, int i1, int i2, int i3, Paint.FontMetricsInt fontMetricsInt) {
+                fontMetricsInt.top -= 5;
+                fontMetricsInt.bottom += 5;
+                fontMetricsInt.ascent -= 5;
+                fontMetricsInt.descent += 5;
+            }
+            @Override
+            public void chooseHeight(CharSequence charSequence, int i, int i1, int i2, int i3, Paint.FontMetricsInt fontMetricsInt, TextPaint paint) {
+                fontMetricsInt.top -= 5;
+                fontMetricsInt.bottom += 5;
+                fontMetricsInt.ascent -= 5;
+                fontMetricsInt.descent += 5;
             }
         }, groupsToMatch);
     }

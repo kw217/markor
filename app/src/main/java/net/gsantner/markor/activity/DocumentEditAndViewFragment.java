@@ -686,6 +686,7 @@ public class DocumentEditAndViewFragment extends MarkorBaseFragment implements F
         _format = FormatRegistry.getFormat(textFormatId, activity, _document);
         _document.setFormat(_format.getFormatId());
         _hlEditor.setHighlighter(_format.getHighlighter());
+        Log.i("keith", "set highlighter to " + _format.getHighlighter());
         _hlEditor.setAutoFormatters(_format.getAutoFormatInputFilter(), _format.getAutoFormatTextWatcher());
         _hlEditor.setAutoFormatEnabled(_appSettings.getDocumentAutoFormatEnabled(_document.path));
         _format.getActions()
